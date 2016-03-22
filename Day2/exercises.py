@@ -14,9 +14,7 @@ For lists return the 3rd item, or None if it doesn't exist
 
 # solutions
 def data_type(data):
-    if type(data) == str:
-        return len(data)
-    elif type(data) == bool:
+    if type(data) == bool:
         return data
     elif type(data) == int:
         if data < 100:
@@ -31,3 +29,36 @@ def data_type(data):
             return data[3]
         else:
             return None
+    elif type(data) == str and len(data) != 0:
+        return len(data)
+    else:
+        return 'no value'
+
+
+# student = {
+#     'name': 'Harrison',
+#     'langs': ['Python', 'JavaScript', 'PHP'],
+#     'age': 23
+# }
+#
+# '''
+# Task 1
+# Create a function add_student that takes a student dictionary as a parameter,
+# and adds the student in a list of students
+# '''
+#
+# # solution
+# def add_student(student):
+#     students = [{'name': 'Kinuthia', 'langs': ['Python', 'JavaScript', 'PHP'], 'age': 25}]
+#     students.append(student)
+#     print(students)
+#
+# add_student()
+#
+# '''
+#     Task 2
+#     Write a function oldest_student that finds the oldest student.
+# '''
+#
+# def oldest_student(add_student, age):
+#     elder = students[0]['age']
