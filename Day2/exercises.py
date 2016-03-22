@@ -35,30 +35,49 @@ def data_type(data):
         return 'no value'
 
 
-# student = {
-#     'name': 'Harrison',
-#     'langs': ['Python', 'JavaScript', 'PHP'],
-#     'age': 23
-# }
+student = {
+    'name': 'Harrison',
+    'langs': ['Python', 'JavaScript', 'PHP'],
+    'age': 23
+}
+
+'''
+Task 1
+Create a function add_student that takes a student dictionary as a parameter,
+and adds the student in a list of students
+'''
+# solution
+students = []
+def add_student(student):
+    students.append(student)
 #
-# '''
-# Task 1
-# Create a function add_student that takes a student dictionary as a parameter,
-# and adds the student in a list of students
-# '''
+'''
+    Task 2
+    Write a function oldest_student that finds the oldest student.
+'''
 #
-# # solution
-# def add_student(student):
-#     students = [{'name': 'Kinuthia', 'langs': ['Python', 'JavaScript', 'PHP'], 'age': 25}]
-#     students.append(student)
-#     print(students)
-#
-# add_student()
-#
-# '''
-#     Task 2
-#     Write a function oldest_student that finds the oldest student.
-# '''
-#
-# def oldest_student(add_student, age):
-#     elder = students[0]['age']
+def oldest_student(students):
+    oldest = 0 # This variable assumes the oldest student is 0 years
+    for student in students:
+        if student['age'] > oldest:
+            oldest = student['age']
+    return oldest
+student1 = {'name': 'Joy', 'langs': ['Python', 'JavaScript', 'PHP'], 'age': 32}
+student2 = {'name': 'Gracie', 'langs': ['Python', 'JavaScript', 'PHP'], 'age': 12}
+add_student(student1)
+add_student(student2)
+
+print oldest_student(students)
+
+'''
+Task 3
+Write a function student_lang that takes in a parameter lang and returns a
+list containing names of students who know that language.
+'''
+
+def student_lang(lang):
+    for student in students:
+        if lang in student['langs']:
+            return student['name']
+
+print student-lang('Python')
