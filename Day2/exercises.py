@@ -27,7 +27,7 @@ def data_type(data):
             return 'more than 100'
 
     elif type(data) == list:
-        if len(data) > 4:
+        if len(data) >= 4:
             return data[3]
         else:
             return None
