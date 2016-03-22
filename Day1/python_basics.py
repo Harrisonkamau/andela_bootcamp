@@ -9,3 +9,4 @@
 my_list = [1,2, True, 23.32, 'Hello','World']
 my_list.append(23)
 print(my_list)
+my_profile = {"github": "Harrisonkamau", "company": "Andela", "age": 24}
