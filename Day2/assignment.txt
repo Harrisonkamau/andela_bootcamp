@@ -1,1 +1,13 @@
 How do we make sure that our code works?
+** It depends on what you mean by making sure that your code works
+- write clean and correct code - master syntax
+- use names that describe what a function, class or a variable does
+- testing it by using good unit tests to make sure that your code does what you want
+- consult other developers and seeking their contributions
+- git pull for peer code reviews
+- motivation - be motivated to code or write a certain program
+- self-doubt, do not just have a perfect theoretical explanation of how certain code works but be practical
+      - see to it that you can write such a comprehensively code all by yourself
+- Software has bugs.This is normal! Impatience - debugging is a part of a developer's life.
+  Sometimes bugs can be hectic but one has to be patient and not just focus on
+  skipping through the project or whatever assignment
