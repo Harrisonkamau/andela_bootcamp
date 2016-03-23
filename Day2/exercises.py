@@ -19,22 +19,21 @@ def data_type(data):
     elif type(data) == int:
         if data < 100:
             return 'less than 100'
+        elif data > 100:
+            return 'more than 100'
         elif data == 100:
             return 'equal to 100'
-        else:
-            return 'more than 100'
-
     elif type(data) == list:
-        if len(data) >= 4:
-            return data[3]
+        if len(data) >= 3:
+            return data[2]
         else:
             return None
-    elif type(data) == str and len(data) != 0:
+    elif type(data) == str:
         return len(data)
     else:
         return 'no value'
 
-
+# declare a student dictionary
 student = {
     'name': 'Harrison',
     'langs': ['Python', 'JavaScript', 'PHP'],
@@ -47,8 +46,10 @@ Create a function add_student that takes a student dictionary as a parameter,
 and adds the student in a list of students
 '''
 # solution
+# Declare an empty list
 students = []
 def add_student(student):
+    # adds student to the students list
     students.append(student)
 #
 '''
@@ -59,11 +60,13 @@ def add_student(student):
 def oldest_student(students):
     oldest = 0 # This variable assumes the oldest student is 0 years
     for student in students:
-        if student['age'] > oldest:
+        # if student['age'] > oldest: if the current age is greater than my assumed age, then the oldest age changes
             oldest = student['age']
     return oldest
+    # declare any number of dictionaries
 student1 = {'name': 'Joy', 'langs': ['Python', 'JavaScript', 'PHP'], 'age': 32}
 student2 = {'name': 'Gracie', 'langs': ['Python', 'JavaScript', 'PHP'], 'age': 12}
+# adds the declared dictionaries to the students list
 add_student(student1)
 add_student(student2)
 
@@ -77,7 +80,9 @@ list containing names of students who know that language.
 
 def student_lang(lang):
     for student in students:
+        #  iterates through the students list
         if lang in student['langs']:
+            # The if statement is iterating through the student's dictionaries to trace the key langs
             return student['name']
 
-print student-lang('Python')
+print student_lang('Python')

@@ -11,3 +11,5 @@ How do we make sure that our code works?
 - Software has bugs.This is normal! Impatience - debugging is a part of a developer's life.
   Sometimes bugs can be hectic but one has to be patient and not just focus on
   skipping through the project or whatever assignment
+  - Breaking code into manageable churns
+  
