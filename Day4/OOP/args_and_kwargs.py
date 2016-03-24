@@ -23,15 +23,15 @@ class Profile(object):
             self.age = kwargs.get('age', 0)
 
 
-me = Person("Harrison", age=21, last_name ="Kamau")
+me = Profile("Harrison", age=21, last_name ="Kamau")
 print me.first_name
 print me.last_name
 
 
 
-def greet_me(**kwargs):
-    if kwargs is not None:
-        for key, item in kwargs.iteritems():
-            print "{} hey you. {}".format(key, item)
-
-print greet_me("Harrrison","Kamau")
+# def greet_me(**kwargs):
+#     if kwargs is not None:
+#         for key, item in kwargs.iteritems():
+#             print "{} hey you {}".format(key,item)
+#
+# print greet_me(name="Harrrison")
